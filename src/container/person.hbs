@@ -1,5 +1,18 @@
 {{#with person}}
 
+
+<header>
+    <h1>RESUME</h1>
+
+    <div>
+        <p>Name - <strong>{{name}}</strong></p>
+        <p>Age - <i>{{age}}</i></p>
+        <p>Gender - <i>{{gender}}</i></p>
+    </div>
+    <hr>
+    <hr>
+</header>
+
 <main>
 
     {{#each education}}
@@ -99,7 +112,6 @@
                         </p>
                         {{/each}}
 
-
                     </li>
                 </ul>
                 {{/each}}
@@ -109,11 +121,24 @@
         {{/each}}
         </p>
 
-
     </section>
     {{/each}}
 
-
 </main>
+
+<footer>
+    <hr>
+    <hr>
+    <div>
+        <em>Copyright by {{person.name}}</em>
+    </div>
+    <br>
+    <div>
+        {{#with address}}
+        <address>{{street}}, {{city}}, {{state}}, {{zip}}, {{country}} </address>
+        {{/with}}
+    </div>
+</footer>
+
 
 {{/with}}
