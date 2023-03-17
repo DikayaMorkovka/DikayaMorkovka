@@ -181,25 +181,21 @@
         <h5>{{title}}</h5>
 
         <div class="row">
-            <div class="col-6 g-3">
+            <ul class="col-2 g-3 list-unstyled">
                 {{#each navigation}}
-                <a class="btn btn-link" href="{{href}}">{{text}}</a>
+                <li><a class="btn btn-link" href="{{href}}">{{text}}</a></li>
                 {{/each}}
-            </div>
-        </div>
-        <div class="row">
-            <div class="g-3 col-6 ">
+            </ul>
+            <ul class="col-2 g-3 list-unstyled">
                 {{#each socialMedia}}
-                <a class="btn btn-outline-dark" href="{{link}}">{{name}}</a>
+                <li><a class="btn btn-outline-dark" href="{{link}}">{{name}}</a></li>
                 {{/each}}
-            </div>
-        </div>
-        <div class="row">
-            <div class="g-3 col-6">
+            </ul>
+            <ul class="col-2 g-3 list-unstyled">
                 {{#each partners}}
-                <a class="btn btn-outline-info" href="{{link}}">{{name}}</a>
+                <li><a class="btn btn-outline-info" href="{{link}}">{{name}}</a></li>
                 {{/each}}
-            </div>
+            </ul>
         </div>
 
         {{/with}}
