@@ -1575,13 +1575,32 @@ router.get('/shophome', function (req, res) {
         },
       ],
     ],
+  })
+})
+
+// ================================================================
+
 
 router.get('/task31', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task31', {
-    layout: "basic",
+    navigation: {
+      links: [
+        {
+          text: 'Home',
+          href: 'https://github.com/',
+        },
+        {
+          text: 'Contacts',
+          href: 'https://www.google.com/',
+        },
+        {
+          text: 'Help',
+          href: 'https://www.youtube.com/',
+        },
+      ],
       button: {
         text: 'Lets start',
         href: 'https://nodejs.org/en/',
@@ -1749,20 +1768,23 @@ router.get('/task31', function (req, res) {
         },
       ],
     },
-    proposition: [
-      {
-        header: 'Our Approach',
-        title: 'Innovative Solutions for Your Business',
-        description:
-          'We create effective solutions that cater to your business needs.',
-      },
-      {
-        header: 'Our Expertise',
-        title: 'Trusted and Experienced Professionals',
-        description:
-          'Our team of experts delivers tailored strategies for best results.',
-      },
-    ],
+    proposition: {
+      title: 'Proposition',
+      card: [
+        {
+          header: 'Our Approach',
+          title: 'Innovative Solutions for Your Business',
+          description:
+            'We create effective solutions that cater to your business needs.',
+        },
+        {
+          header: 'Our Expertise',
+          title: 'Trusted and Experienced Professionals',
+          description:
+            'Our team of experts delivers tailored strategies for best results.',
+        },
+      ],
+    },
     footer: {
       title: 'Navigation',
       navigation: [
@@ -1811,6 +1833,7 @@ router.get('/task31', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
+
 
 // ================================================================
 
