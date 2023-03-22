@@ -1,0 +1,107 @@
+<main>
+    <section>
+        <h1>{{header}}</h1>
+
+        {{#with purchase}}
+
+        <ul class="nav nav-tabs mb-4">
+            {{#each tabs}}
+            <li class="nav-link {{#if @first}} active {{/if}}">{{this}}</li>
+            {{/each}}
+        </ul>
+
+        {{#with actionBlock}}
+        <div class="row">
+            <div class="col-3">
+                <input class="form-control" placeholder="{{input.placeholder}}" type="text">
+            </div>
+            <div class="col-5">
+                {{#each buttons}}
+                <a class="btn {{#if isSuccess}}btn-success{{/if}} {{#if isOutline}}btn-outline-success{{/if}} {{#if isDanger}}btn-outline-danger{{/if}}"
+                    href="{{link}}">{{text}}</a>
+                {{/each}}
+            </div>
+        </div>
+        {{/with}}
+
+        <hr class="my-5">
+
+        {{#each itemList}}
+        {{>shopPurchaseItem}}
+        {{/each}}
+
+        {{/with}}
+    </section>
+
+    <hr class="my-5">
+
+    <section>
+        {{#with userInfo}}
+
+        <h2 class="mb-5">{{title}}</h2>
+
+        <div class="border p-2 my-2">
+            {{#with profile}}
+            <h3>{{title}}</h3>
+
+            <div class="row">
+
+                {{#each profileData}}
+                <div class="col-4">
+                    <p class="mb-0">{{title}}</p>
+                    <p class="fw-bold">{{value1}}</p>
+                    <p class="mb-0">{{otherInfo}}</p>
+                    <p class="fw-bold">{{value2}}</p>
+                    <a class="btn {{#if isPrimary}}btn-primary{{/if}} {{#if isSecondary}}btn-outline-secondary{{/if}} {{#if isDanger}}btn-outline-danger{{/if}}"
+                        href="{{link}}">{{text}}</a>
+                </div>
+                {{/each}}
+
+            </div>
+
+            {{/with}}
+        </div>
+
+
+        <div class="border p-2 my-2">
+            {{#with recipients}}
+            <h3>{{title}}</h3>
+            <div class="row">
+                {{#each users}}
+                <div class="col-4">
+                    <p class="fw-bold">{{name}}</p>
+                    <p>{{phone}}</p>
+                    <a class="btn btn-primary" href="{{button.link}}">{{button.text}}</a>
+                </div>
+                {{/each}}
+            </div>
+            {{/with}}
+
+            {{#with contacts}}
+            {{/with}}
+        </div>
+
+
+        <div class="border p-2 my-2">
+            {{#with contacts}}
+            <h3>{{title}}</h3>
+
+            <div class="row">
+                {{#each contactData}}
+                <div class="col-4">
+                    <p>{{title}}</p>
+                    <p class="fw-bold">{{value}}</p>
+                    <a class="btn {{#if isPrimary}}btn-primary{{/if}} {{#if isSecondary}}btn-outline-secondary{{/if}} {{#if isDanger}}btn-outline-danger{{/if}}"
+                        href="{{link}}">{{text}}</a>
+                </div>
+                {{/each}}
+            </div>
+
+            {{/with}}
+        </div>
+
+
+        {{/with}}
+    </section>
+
+</main>
