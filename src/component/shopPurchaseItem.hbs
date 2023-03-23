@@ -1,0 +1,24 @@
+<div class="row p-1 border-bottom my-3">
+    <div class="col-3 d-flex flex-column justify-content-center">
+        <p>{{number}}</p>
+        <p class="fw-bold">{{status}}</p>
+    </div>
+    <div class="d-flex flex-column col-1 justify-content-center">
+        {{#with amount}}
+        {{title}}
+        <span>{{value}}</span>
+        {{/with}}
+    </div>
+
+    <div class="col-6">
+        {{#each images}}
+        <img src="{{this}}" alt="photos">
+        {{/each}}
+    </div>
+
+    <div class="d-flex flex-column col-2 justify-content-evenly">
+        {{#with button}}
+        <button class="btn {{#if isPrimary}}btn-primary{{/if}}">{{text}}</button>
+        {{/with}}
+    </div>
+</div>
