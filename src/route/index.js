@@ -39,11 +39,103 @@ var footer = {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
+router.get('/index', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: "index",
+    links: [
+      {
+        name: "Biography",
+        href: "/bio",
+      },
+      {
+        name: "Car",
+        href: "/car",
+      },
+      {
+        name: "Educations",
+        href: "/education",
+      },
+      {
+        name: "JS",
+        href: "/js",
+      },
+      {
+        name: "Mac",
+        href: "/mac",
+      },
+      {
+        name: "Person",
+        href: "/person",
+      },
+      {
+        name: "Program",
+        href: "/program",
+      },
+      {
+        name: "Shop cart",
+        href: "/shopcart",
+      },
+      {
+        name: "Shop catalog",
+        href: "/shopcatalog",
+      },
+      {
+        name: "Shop home",
+        href: "/shophome",
+      },
+      {
+        name: "Shop news",
+        href: "/shopnews",
+      },
+      {
+        name: "Shop order",
+        href: "/shoporder",
+      },
+      {
+        name: "Shop product",
+        href: "/shopproduct",
+      },
+      {
+        name: "Shop profile",
+        href: "/shopprofile",
+      },
+      {
+        name: "Shop review",
+        href: "/shopreview",
+      },
+      {
+        name: "Skills",
+        href: "/skills",
+      },
+      {
+        name: "Summary",
+        href: "/summary",
+      },
+      {
+        name: "Task21",
+        href: "/task21",
+      },
+      {
+        name: "Task22",
+        href: "/task22",
+      },
+      {
+        name: "Task31",
+        href: "/task31",
+      },
+      {
+        name: "Web",
+        href: "/web",
+      },
+      {
+        name: "Work",
+        href: "/work",
+      },
+    ]
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -54,6 +146,7 @@ router.get('/summary', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('summary', {
     // ↙ сюди вводимо JSON дані
+    layout: 'big',
 
     page: {
       title: "Resume | Summary",
@@ -84,6 +177,7 @@ router.get('/skills', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('skills', {
     // ↙ сюди вводимо JSON дані
+    layout: 'big',
 
     page: {
       title: "Resume | Skills",
@@ -161,6 +255,7 @@ router.get('/education', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('education', {
     // ↙ сюди вводимо JSON дані
+    layout: 'big',
 
     page: {
       title: "Resume | Education",
@@ -1291,6 +1386,7 @@ router.get('/task31', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task31', {
+    layout: "basic",
     navigation: {
       links: [
         {
