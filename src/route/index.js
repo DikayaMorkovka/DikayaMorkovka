@@ -3427,6 +3427,7 @@ router.get('/shopreview', function (req, res) {
 
 router.get('/shopcatalog', function (req, res) {
   res.render('shopcatalog', {
+    layout: "shop",
     navigation: {
       links: [
         {
