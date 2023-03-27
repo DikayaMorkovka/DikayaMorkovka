@@ -1,21 +1,21 @@
 <header>
-    <h1 style="text-align: center;"><strong>{{make}} {{model}}</strong> {{color}} ({{year}})</h1>
+    <h1 class="text-center"><strong>{{make}} {{model}}</strong> {{color}} ({{year}})</h1>
     <hr>
 </header>
 <main>
     <section>
         <u>
-            <h2 style="text-align: center;">Features:</h2>
+            <h2 class="text-center mb-3">Features:</h2>
         </u>
         {{#with features}}
-        <ul style="display: flex;">
+        <ul class="row text-center list-group list-group-flush list-group-horizontal">
 
-            <li>
+            <li class="list-group-item col-4">
                 <h3><i>Interior</i></h3>
                 <hr>
                 {{#with interior}}
-                <ul>
-                    <li><b>seats:</b>
+                <ul class="list-group list-group-flush ">
+                    <li class="list-group-item"><b>seats:</b>
                         {{#with seats}}
                         <p>material - {{material}}</p>
                         <p>color - {{color}}</p>
@@ -23,7 +23,7 @@
                         <p>ventilated - {{#if ventilated}} yes {{/if}}</p>
                         {{/with}}
                     </li>
-                    <li><b>dashboard:</b>
+                    <li class="list-group-item"><b>dashboard:</b>
                         {{#with dashboard}}
                         <p>material - {{material}}</p>
                         <p>color - {{color}}</p>
@@ -39,7 +39,7 @@
                         </p>
                         {{/with}}
                     </li>
-                    <li><b>audio:</b>
+                    <li class="list-group-item"><b>audio:</b>
                         {{#with audio}}
                         <p>system - {{system}}</p>
                         <p>speakers - {{speakers}}</p>
@@ -52,26 +52,26 @@
                 {{/with}}
             </li>
 
-            <li>
+            <li class="list-group-item col-4">
                 <h3><i>Exterior</i></h3>
                 <hr>
                 {{#with exterior}}
-                <ul>
-                    <li><b>wheels:</b>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b>wheels:</b>
                         {{#with wheels}}
                         <p>size - {{size}}</p>
                         <p>type - {{type}}</p>
                         <p>color - {{color}}</p>
                         {{/with}}
                     </li>
-                    <li><b>headlights:</b>
+                    <li class="list-group-item"><b>headlights:</b>
                         {{#with headlights}}
                         <p>type - {{type}}</p>
                         <p>brightness - {{brightness}}</p>
                         <p>automatic - {{#if automatic}}yes{{/if}}</p>
                         {{/with}}
                     </li>
-                    <li><b>sunroof:</b>
+                    <li class="list-group-item"><b>sunroof:</b>
                         {{#with headlights}}
                         <p>type - {{type}}</p>
                         <p>size - {{size}}</p>
@@ -82,12 +82,12 @@
                 {{/with}}
             </li>
 
-            <li>
+            <li class="list-group-item  col-4">
                 <h3><i>Safety</i></h3>
                 <hr>
                 {{#with safety}}
-                <ul>
-                    <li><b>airbags:</b>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b>airbags:</b>
                         {{#with airbags}}
                         <p>front - {{front}}</p>
                         <p>side - {{side}}</p>
@@ -95,7 +95,7 @@
                         <p>rear - {{rear}}</p>
                         {{/with}}
                     </li>
-                    <li><b>assistance:</b>
+                    <li class="list-group-item"><b>assistance:</b>
                         {{#with assistance}}
                         <p>blind_spot_monitoring - {{#if blind_spot_monitoring}}yes{{/if}}</p>
                         <p>rear_cross_traffic_alert - {{#if rear_cross_traffic_alert}}yes{{/if}}</p>
