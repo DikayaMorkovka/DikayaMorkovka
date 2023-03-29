@@ -40,7 +40,7 @@
 
         <h2 class="mb-5">{{title}}</h2>
 
-        <div class="border p-2 my-2">
+        <div class="card p-2 my-2">
             {{#with profile}}
             <h3>{{title}}</h3>
 
@@ -48,10 +48,10 @@
 
                 {{#each profileData}}
                 <div class="col-4">
-                    <p class="mb-0">{{title}}</p>
-                    <p class="fw-bold">{{value1}}</p>
-                    <p class="mb-0">{{otherInfo}}</p>
-                    <p class="fw-bold">{{value2}}</p>
+                    <p class="mb-0 text-muted">{{title}}</p>
+                    <p>{{value1}}</p>
+                    <p class="mb-0 text-muted">{{otherInfo}}</p>
+                    <p>{{value2}}</p>
                     <a class="btn {{#if isPrimary}}btn-primary{{/if}} {{#if isSecondary}}btn-outline-secondary{{/if}} {{#if isDanger}}btn-outline-danger{{/if}}"
                         href="{{link}}">{{text}}</a>
                 </div>
@@ -63,13 +63,13 @@
         </div>
 
 
-        <div class="border p-2 my-2">
+        <div class="card p-2 my-2">
             {{#with recipients}}
             <h3>{{title}}</h3>
             <div class="row">
                 {{#each users}}
                 <div class="col-4">
-                    <p class="fw-bold">{{name}}</p>
+                    <p>{{name}}</p>
                     <p>{{phone}}</p>
                     <a class="btn btn-primary" href="{{button.link}}">{{button.text}}</a>
                 </div>
@@ -82,15 +82,15 @@
         </div>
 
 
-        <div class="border p-2 my-2">
+        <div class="card p-2 my-2">
             {{#with contacts}}
             <h3>{{title}}</h3>
 
             <div class="row">
                 {{#each contactData}}
                 <div class="col-4">
-                    <p>{{title}}</p>
-                    <p class="fw-bold">{{value}}</p>
+                    <p class="text-muted">{{title}}</p>
+                    <p>{{value}}</p>
                     <a class="btn {{#if isPrimary}}btn-primary{{/if}} {{#if isSecondary}}btn-outline-secondary{{/if}} {{#if isDanger}}btn-outline-danger{{/if}}"
                         href="{{link}}">{{text}}</a>
                 </div>

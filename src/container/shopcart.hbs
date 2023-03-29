@@ -1,11 +1,16 @@
 <main>
     <section>
-        <div class="d-flex justify-content-between">
+        <div class="row">
             {{#with header}}
-            <h1>{{title}}</h1>
+            <div class="col-4">
+                <h1>{{title}}</h1>
+            </div>
+            <div class="col-6"></div>
             {{#with button}}
-            <a class="d-flex align-items-center justify-content-center d-block btn btn-outline-secondary"
-                href="{{link}}">{{text}}</a>
+            <div class="col-2">
+                <a class="btn btn-outline-secondary" href="{{link}}">{{text}}</a>
+            </div>
+
             {{/with}}
             {{/with}}
         </div>
@@ -19,12 +24,13 @@
         <hr class="my-5">
 
         {{#with total}}
-        <div class="row justify-content-between">
+        <div class="row">
             <div class="col-6">
                 <p class="h3">{{title}}</p>
                 <p class="h2">{{amount}}</p>
                 <p class="small ">{{delivery}}</p>
             </div>
+            <div class="col-3"></div>
             <div class="col-3 d-flex flex-column justify-content-evenly">
                 {{#each buttons}}
                 <a class="btn {{#if isSuccess}}btn-success{{/if}} {{#if isOutline}}btn-outline-success{{/if}}"
@@ -42,7 +48,7 @@
     <section>
 
         {{#with goodsOtherBlock}}
-        <h2 class="h2 text-center">{{title}}</h2>
+        <h2 class="display-2 text-center">{{title}}</h2>
         {{> shopcard}}
         {{/with}}
     </section>

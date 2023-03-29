@@ -9,9 +9,9 @@
             {{#if isFast}} <div class="badge bg-success">Швидка доставка</div>{{/if}}
             {{#if isFree}} <div class="badge bg-secondary">Безкоштовна доставка</div>{{/if}}
         </div>
-        <h6 class="card-title fs-4">{{name}}</h6>
+        <h6 class="card-title">{{name}}</h6>
         <p class="card-text">{{review.amount}} {{review.text}} F</p>
-        <p class="card-text fs-4">{{price}}</p>
+        <p class="card-text">{{price}}</p>
         <p class="card-text">{{delivery}}</p>
         {{#each buttons}}
         <a class="btn my-1 {{#if isPrimary}}btn-primary{{/if}} {{#if isSecondary}}btn-secondary{{/if}}"

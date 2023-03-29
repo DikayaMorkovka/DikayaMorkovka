@@ -1,18 +1,20 @@
 <section>
     {{#each reviewList}}
-    <div class="border px-2 mb-5">
+    <div class="card px-2 mb-5">
 
-        <div class="border m-2 mb-4 mt-4">
+        <div class="card mt-2 ms-2">
 
-            <div class="d-flex border-bottom p-2 align-items-center justify-content-between">
-                <div>
-                    <p class="fw-bold fs-5 m-0">{{title.userName}}</p>
+            <div class="p-2 row">
+                <div class="col-3">
+                    <p class="m-0"><strong>{{title.userName}}</strong></p>
                     <p class="m-0">{{title.caption}}</p>
                 </div>
-                <div>
+                <div class="col"></div>
+                <div class="col-2">
                     <p class="m-0">{{title.date}}</p>
                 </div>
             </div>
+                <hr>
 
             <div class="p-2">
                 {{#with reviewBody}}
@@ -21,11 +23,11 @@
                 {{#each text}}
                 <p>{{this}}</p>
                 {{/each}}
-                <p class="fw-bold m-0">{{advantages.title}}:</p>
+                <p class="m-0"><strong>{{advantages.title}}:</strong></p>
                 <p>{{advantages.text}}</p>
-                <p class="fw-bold m-0">{{disadvantages.title}}:</p>
+                <p class="m-0"><strong>{{disadvantages.title}}:</strong></p>
                 <p>{{disadvantages.text}}</p>
-                <div class="d-flex gx-2">
+                <div class="gx-2">
                     {{#each images}}
                     <img class="me-2" src="{{this}}" alt="photos">
                     {{/each}}
@@ -34,12 +36,16 @@
             </div>
         </div>
         {{#each coments}}
-        <div class="border p-2 my-4 ms-5">
-            <div class="d-flex justify-content-between">
-                <p class="fs-5 fw-bold">{{userName}}</p>
-                <p>{{date}}</p>
+        <div class="card p-2 my-3 ms-5">
+            <div class="card-body">
+            <div class="row">
+                <p class="col-2"><strong>{{userName}}</strong></p>
+                <div class="col"></div>
+                <p class="col-2">{{date}}</p>
             </div>
             <p>{{text}}</p>
+            </div>
+
         </div>
         {{/each}}
     </div>
